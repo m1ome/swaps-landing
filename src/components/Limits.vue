@@ -18,8 +18,8 @@
                 </tr>
                 <tr>
                     <td>Maximum single Fiat deposit</td>
-                    <td>€4,000.00</td>
-                    <td>Change shall not accept transfers that are higher than the specific value.</td>
+                    <td>€10,000.00</td>
+                    <td>Change should request source of funds documents it transfer amout are higher than the specific value.</td>
                 </tr>
                 <tr>
                     <td>Minimum single Fiat withdrawal</td>
@@ -28,8 +28,8 @@
                 </tr>
                 <tr>
                     <td>Monthly total withdrawals</td>
-                    <td>€15,000.00</td>
-                    <td>Due to regulatory restrictions Change can not process withdrawals, that in total are higher than the specific value in a calendar month, including Fiat and cryptocurrency withdrawals.</td>
+                    <td>-</td>
+                    <td>Due to regulatory restrictions Change withdrawal amounts are limited to client KYC level.</td>
                 </tr>
                 <tr>
                     <td>Maximum Fiat and cryptocurrency balance</td>
@@ -50,15 +50,10 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>Bitcoin (BTC)</td>
-                    <td>0.00%</td>
-                    <td>Change shall charge a fee on buying or selling a specified cryptocurrency for Fiat or when converting from or to USDT.</td>
-                </tr>
-                <tr>
-                    <td>Ethereum (ETH)</td>
-                    <td>0.50%</td>
-                    <td>Change shall charge a fee on buying or selling a specified cryptocurrency for Fiat or when converting from or to USDT.</td>
-                </tr>                                                            
+                    <td>Any</td>
+                    <td>up to 2.00%</td>
+                    <td>Change shall charge a fee on buying or selling a specified cryptocurrency.</td>
+                </tr>                                                           
             </tbody>
         </table>        
 
@@ -73,14 +68,14 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>Fiat transfer</td>
+                    <td>Fiat deposit</td>
                     <td>0.00%</td>
                     <td>Change shall not charge any percentage for transferring Fiat from a bank account to the Fiat Account.</td>
                 </tr>
                 <tr>
                     <td>Fiat withdrawal</td>
-                    <td>0.00%</td>
-                    <td>Change shall not charge any percentage for transferring Fiat from a bank account to the Fiat Account.</td>
+                    <td>1.00%</td>
+                    <td>Change shall charge a fee for transferring Fiat from Fiat Account to the bank account.</td>
                 </tr>      
                 <tr>
                     <td>Cryptocurrency deposit</td>
@@ -89,8 +84,8 @@
                 </tr>        
                 <tr>
                     <td>Cryptocurrency withdrawal</td>
-                    <td>0.00%</td>
-                    <td>Change shall not charge any percentage for transferring cryptocurrencies from the Wallet.</td>
+                    <td>0.00% + network fee</td>
+                    <td>Change shall charge network fee for transferring cryptocurrencies from the Wallet.</td>
                 </tr>                                                                                 
             </tbody>
         </table>  
@@ -122,6 +117,7 @@
     letter-spacing: 0.02em;
     color: #8C979F;
     padding-bottom: 20px;
+    padding-right: 50px;
 }
 .layout table tbody td {
     font-size: 16px;
@@ -130,8 +126,8 @@
     color: #193040;
     padding-bottom: 15px;
     padding-right: 50px;
+    vertical-align: top;
 }
-
 
 .layout p.small {
     font-size: 16px;
