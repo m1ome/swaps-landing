@@ -7,7 +7,17 @@
     <Index/>
 
     <div class="footer">
-      <div class="circle"></div>
+      <div class="content">
+        <div class="links">
+          <a href="#">Terms</a>
+          <a href="#">Limits</a>
+          <a href="#">Privacy Policy</a>
+          <br style="clear: both">
+        </div>
+        <div class="text">
+          Crypto asset services are provided by Octo Liquidity OU under virtual currency exchange license no FVR001321 and wallet service provider license no FRK001202 issued by Estonian FIU.
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -36,7 +46,31 @@ body {
   height: 100px;
   overflow: hidden;
   position: relative;
-  background: red;
+}
+
+.footer .content {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.footer .content a {
+  font-size: 12px;
+  line-height: 16px;
+  text-decoration: none;
+  color: #193040;
+  opacity: 0.5;
+  display: block;
+  float: left;
+  margin-right: 48px;
+}
+
+.footer .content .text {
+  font-size: 12px;
+  line-height: 16px;
+  color: #193040;
+  opacity: 0.25;
+  letter-spacing: 0.02em;
+  margin-top: 10px;
 }
 .circles {
   position: relative;
