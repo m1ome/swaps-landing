@@ -3,15 +3,26 @@
     <div class="circles">
       <div class="top"></div>
     </div>
+
+    <!-- Header stuff -->
+    <div class="header">
+        <div class="regulation">
+            <p>regulated by EU</p>
+            <div class="logo"></div>
+        </div>
+        <router-link to="/">
+          <div class="logo"></div>
+        </router-link>
+    </div>    
     
-    <Index/>
+    <router-view></router-view>
 
     <div class="footer">
       <div class="content">
         <div class="links">
-          <a href="#">Terms</a>
-          <a href="#">Limits</a>
-          <a href="#">Privacy Policy</a>
+          <router-link to="/terms">Terms</router-link>
+          <router-link to="/limits">Limits</router-link>
+          <router-link to="/privacy">Privacy Policy</router-link>
           <br style="clear: both">
         </div>
         <div class="text">
@@ -23,13 +34,8 @@
 </template>
 
 <script>
-import Index from './components/Index.vue'
-
 export default {
-  name: 'App',
-  components: {
-    Index
-  }
+  name: 'App'
 }
 </script>
 
@@ -89,6 +95,79 @@ body {
     opacity: 0.1;    
 
     border-radius: 50%;
+}
+
+.header {
+    height: 150px;
+    position: relative;
+}
+
+.header .logo {
+    position: absolute;
+    width: 98px;
+    height: 92px;
+    left: calc(50% - 98px/2);
+    top: calc(50% - 92px/2);
+
+    background: url("./assets/images/logo.svg");
+}
+
+.header .regulation {
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+
+    position: absolute;
+    width: 156px;
+    height: 24px;
+    left: 91px;
+    top: 63px;
+}
+
+.header .regulation p {
+    position: static;
+    width: 124px;
+    height: 24px;
+    left: 0px;
+    top: 0px;
+    padding-right: 3px;
+    padding-top: 2px;
+
+    /* Desktop / Default */
+    font-family: ALS Sector;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+
+    /* identical to box height, or 150% */
+    letter-spacing: 0.02em;
+
+    /* Main / Black 50 */
+    color: #8C979F;
+
+    /* Inside Auto Layout */
+    flex: none;
+    order: 0;
+    align-self: center;
+    margin: 8px 0px;
+}
+
+.header .regulation .logo {
+    position: static;
+    width: 24px;
+    height: 24px;
+    left: 132px;
+    top: 0px;
+
+    background: url("./assets/images/flag.svg");
+
+    /* Inside Auto Layout */
+    flex: none;
+    order: 1;
+    align-self: center;
+    margin: 8px 0px;
+  
 }
 
 #app {
